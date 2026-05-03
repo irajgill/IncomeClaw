@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-03",
+  "currency": "USD",
+  "leads": [
+    {
+      "id": "ACME-2026-01",
+      "company": "Acme Robotics, Inc.",
+      "industry": "Industrial automation",
+      "headcount": 240,
+      "headquarters": "Pittsburgh, PA",
+      "decisionMaker": {
+        "name": "Maya Okafor",
+        "title": "VP of Operations",
+        "linkedinPath": "in/maya-okafor-acme",
+        "email": "maya.okafor@acme-robotics.example"
+      },
+      "annualRevenueUsd": 38000000,
+      "estimatedBudgetUsd": 75000,
+      "painPoints": [
+        "Order intake desk is fully manual; SLA breach rate creeping past 12%.",
+        "Engineering can't get clean field-failure data — RMAs sit in spreadsheets.",
+        "Salesforce + Netsuite still don't reconcile on warranty claims."
+      ],
+      "trigger": "Q1 board memo flagged 'AI-assisted operations' as a 2026 mandate.",
+      "buyingCycleDays": 35,
+      "preferredAngle": "ROI-led: replace the order-intake desk first, expand to RMAs by Q3."
+    },
+    {
+      "id": "MERIDIAN-2026-02",
+      "company": "Meridian Health Network",
+      "industry": "Multi-state primary care",
+      "headcount": 1400,
+      "headquarters": "Austin, TX",
+      "decisionMaker": {
+        "name": "Dr. Priya Raghavan",
+        "title": "Chief Medical Information Officer",
+        "linkedinPath": "in/priya-raghavan-meridian",
+        "email": "praghavan@meridianhealth.example"
+      },
+      "annualRevenueUsd": 220000000,
+      "estimatedBudgetUsd": 180000,
+      "painPoints": [
+        "After-hours triage call volume up 40% YoY, staff burnout flagged in Q4 survey.",
+        "EHR integrations are duct-taped Mirth pipelines — Epic upgrade due 2026-Q4.",
+        "Clinical documentation review backlog is 4500 charts."
+      ],
+      "trigger": "Just lost a $4M HRSA grant tied to documentation timeliness.",
+      "buyingCycleDays": 90,
+      "preferredAngle": "Compliance-first: prove HIPAA-clean audit trail before clinician throughput pitch."
+    },
+    {
+      "id": "NORTHGATE-2026-03",
+      "company": "Northgate Capital Partners",
+      "industry": "Mid-market private equity",
+      "headcount": 65,
+      "headquarters": "Greenwich, CT",
+      "decisionMaker": {
+        "name": "Tomás Reinhardt",
+        "title": "Managing Director, Portfolio Operations",
+        "linkedinPath": "in/tomas-reinhardt-ngcp",
+        "email": "treinhardt@northgatecp.example"
+      },
+      "annualRevenueUsd": 0,
+      "aumUsd": 1900000000,
+      "estimatedBudgetUsd": 250000,
+      "painPoints": [
+        "Eight portcos × four diligence vendors = no consolidated insights.",
+        "Operating partners spend 60% of cycle on data wrangling, not strategy.",
+        "LP reports require manual cross-fund roll-ups every quarter."
+      ],
+      "trigger": "New LP (a $40B pension) requires AI governance attestation by 2026-Q3.",
+      "buyingCycleDays": 60,
+      "preferredAngle": "Land at one portco; expand mandate at the firm level after first win."
+    },
+    {
+      "id": "CARGILL-2026-04",
+      "company": "Cargill Northwest Logistics",
+      "industry": "Freight + cold-chain logistics",
+      "headcount": 320,
+      "headquarters": "Tacoma, WA",
+      "decisionMaker": {
+        "name": "Eun-ji Park",
+        "title": "Director of Network Planning",
+        "linkedinPath": "in/eunji-park-cnl",
+        "email": "epark@cnl-logistics.example"
+      },
+      "annualRevenueUsd": 92000000,
+      "estimatedBudgetUsd": 110000,
+      "painPoints": [
+        "Spot-rate volatility eating 4 pts of margin since the I-90 corridor changes.",
+        "Driver retention dropped to 71% — recruiting overhead is brutal.",
+        "Customer 'where's-my-truck' calls swamp the dispatch desk on Mondays."
+      ],
+      "trigger": "Insurance carrier (Travelers) renewing with telematics-linked rates 2026-08.",
+      "buyingCycleDays": 45,
+      "preferredAngle": "Wedge: a single high-volume lane, prove margin lift, then enterprise rollout."
+    },
+    {
+      "id": "LUMINA-2026-05",
+      "company": "Lumina Studio Group",
+      "industry": "Independent film + episodic production",
+      "headcount": 55,
+      "headquarters": "Atlanta, GA",
+      "decisionMaker": {
+        "name": "Marcus Webb",
+        "title": "Head of Production Technology",
+        "linkedinPath": "in/marcus-webb-lumina",
+        "email": "marcus@luminastudios.example"
+      },
+      "annualRevenueUsd": 18000000,
+      "estimatedBudgetUsd": 45000,
+      "painPoints": [
+        "Dailies tagging is still manual — assistant editors burning 25 hrs/wk.",
+        "Storyboard-to-shot-list conversion is a Frankenstein of Notion + Google Docs.",
+        "Accidentally shipped an unlocked cut to a streamer last quarter — embarrassing."
+      ],
+      "trigger": "Just signed a multi-picture deal; production volume doubles in 2026.",
+      "buyingCycleDays": 30,
+      "preferredAngle": "Cost + speed: reframe as 'one fewer hire per show', not enterprise software."
+    }
+  ]
+}

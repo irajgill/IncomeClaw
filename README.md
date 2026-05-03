@@ -6,12 +6,15 @@
 [![CI](https://github.com/irajgill/IncomeClaw/actions/workflows/ci.yml/badge.svg)](https://github.com/irajgill/IncomeClaw/actions/workflows/ci.yml)
 [![gitleaks](https://github.com/irajgill/IncomeClaw/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/irajgill/IncomeClaw/actions/workflows/gitleaks.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-![Phase](https://img.shields.io/badge/phase-A%20complete-green)
+![Phase](https://img.shields.io/badge/phase-B%20complete-green)
 ![0G](https://img.shields.io/badge/0G-Galileo%20testnet-orange)
 
-**Status:** Phase A complete. Phase B (framework streaming PRs) lives in the
-[`sovereignclaw`](https://github.com/amsorrytola/SovereignClaw) repo. Phase C
-(agent definitions) starts once `@sovereignclaw/core@0.2.0` ships.
+**Status:** Phase B complete (5 agents + 4 tools + run-agent / run-tool CLIs).
+DoD run on 0G Galileo testnet recorded in
+[`docs/phase-b.md`](docs/phase-b.md) — all five agents wrote encrypted
+state to OG_Log; `pay-onchain` submitted a real `PaymentReceipt` tx
+([`0x15b71bc5…a5319`](https://chainscan-galileo.0g.ai/tx/0x15b71bc51d634d01b4fde345ce622186459686565ff8cdd222de87fec58a5319)).
+Phase C (mesh wiring) starts next.
 
 ---
 
@@ -133,12 +136,13 @@ pnpm lint:fix                           # eslint --fix
 
 ## What's next
 
-- **Phase B** — upstream `@sovereignclaw/core@0.2.0` + `@sovereignclaw/mesh@0.2.0`
-  with streaming inference + per-agent run events. Lives in the
-  [`sovereignclaw`](https://github.com/amsorrytola/SovereignClaw) repo. **No
-  IncomeClaw work happens until those publish.**
-- **Phase C** — `agents/brain.ts` … `operator.ts`, plus `mock-leads.json`.
-- **Phase D–F** — mesh wiring, BullMQ, SSE feed, the streaming UI.
+- **Phase B (DONE)** — five agent factories + four tools + `pnpm run-agent` /
+  `pnpm run-tool` CLIs. DoD verified end-to-end on Galileo
+  ([`docs/phase-b.md`](docs/phase-b.md)).
+- **Phase C (next)** — mesh wiring: `agents/mesh.ts` instantiates the Mesh,
+  composes `hierarchical` (Brain root) + `planExecuteCritique`, plus the
+  BullMQ `mesh-runner` worker and a replay test.
+- **Phase D–F** — backend API, frontend dashboard, PDF + payment polish.
 
 See [`IncomeClaw-Roadmap.md`](IncomeClaw-Roadmap.md) for the whole plan.
 

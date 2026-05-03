@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-03",
+  "note": "Pre-recorded transcripts the Closer agent reads to keep demo timing predictable. Roadmap §13/I3: framed openly in the demo video. Real interactive negotiation lands post-hackathon.",
+  "exchanges": [
+    {
+      "leadId": "ACME-2026-01",
+      "scenario": "Procurement pushes back on annual price after a strong technical demo.",
+      "turns": [
+        {
+          "speaker": "buyer",
+          "name": "Rachel Mendes",
+          "title": "Senior Procurement Manager",
+          "text": "We love the demo, but $75K/yr is well outside our software-agent line item. The most we've got envelope on is $48K, and that's only if you can guarantee the SLA breach reduction in writing."
+        },
+        {
+          "speaker": "agent",
+          "role": "closer",
+          "text": "We hear the line-item constraint. Two options: (1) start with order-intake-only at $52K/yr, RMA module added on a usage tier when the SLA delta is proven — keeps you at framework margin year one. (2) Full deployment at $68K/yr with a contractual SLA: if breach rate doesn't drop below 6% by month four, you withhold 30%. Which lines up better with how procurement reports against the AI mandate?"
+        },
+        {
+          "speaker": "buyer",
+          "name": "Rachel Mendes",
+          "title": "Senior Procurement Manager",
+          "text": "Option 2 reads better to the board memo language. Get me the SLA clause draft by Friday and I can walk it into Tuesday's review."
+        },
+        {
+          "speaker": "agent",
+          "role": "closer",
+          "text": "Friday morning, with the breach-measurement methodology pre-agreed so there's no ambiguity at the four-month mark. Sending the term sheet now; signed by EOD Tuesday is the path."
+        }
+      ],
+      "outcome": {
+        "agreedPriceUsd": 68000,
+        "term": "12 months",
+        "paymentSchedule": "40% on signature, 30% at month 4 SLA milestone, 30% at month 9 milestone",
+        "dealRef": "ACME-2026-01"
+      }
+    },
+    {
+      "leadId": "MERIDIAN-2026-02",
+      "scenario": "CMIO needs HIPAA evidence before any clinical-throughput conversation.",
+      "turns": [
+        {
+          "speaker": "buyer",
+          "name": "Dr. Priya Raghavan",
+          "title": "CMIO",
+          "text": "Throughput is downstream. I need a SOC 2 Type II report, your BAA, and a clean penetration test from the last 12 months on my desk before this goes to security review. Without that, I can't even start the procurement clock."
+        },
+        {
+          "speaker": "agent",
+          "role": "closer",
+          "text": "Sending all three today. The SOC 2 is from H2 2025 — auditor was Schellman. Pen test was completed in February by NetSPI; the report includes one finding that we remediated in 11 days, the close letter is attached. BAA template is our standard, redline whatever you need. Once security clears, we can discuss the documentation backlog as the quick-win wedge — that's where your HRSA timeline pressure points us."
+        },
+        {
+          "speaker": "buyer",
+          "name": "Dr. Priya Raghavan",
+          "title": "CMIO",
+          "text": "If security clears in two weeks I want a 60-day pilot scoped to the documentation backlog only. $40K, evaluate, then we talk about the rest. If it lands the HRSA finding I expand to triage."
+        },
+        {
+          "speaker": "agent",
+          "role": "closer",
+          "text": "Pilot at $42K with the backlog retro included so you can show the ROI graph at the HRSA review. We commit to a 70% backlog clearance in 60 days — if we miss, the pilot fee is credited toward the production deal. That works?"
+        }
+      ],
+      "outcome": {
+        "agreedPriceUsd": 42000,
+        "term": "60 days (pilot, expansion priced separately)",
+        "paymentSchedule": "100% on pilot kickoff, credited toward production deal if SLA missed",
+        "dealRef": "MERIDIAN-2026-02"
+      }
+    },
+    {
+      "leadId": "NORTHGATE-2026-03",
+      "scenario": "PE firm wants a low-stakes wedge before a firm-level mandate.",
+      "turns": [
+        {
+          "speaker": "buyer",
+          "name": "Tomás Reinhardt",
+          "title": "MD, Portfolio Operations",
+          "text": "I can't sell a firm-level mandate cold. Pick one portco, prove it works in a quarter, and then I'll bring you in front of the IC for the full scope. What's the right entry footprint?"
+        },
+        {
+          "speaker": "agent",
+          "role": "closer",
+          "text": "$60K, single portco, 90 days. Scope is the operating-partner data wrangling pain — we ingest the four diligence vendors and produce a weekly insights pack. If at the 90-day review the operating partner says they got 30% of their cycle back, you bring us to the IC at the firm-level $250K mandate."
+        },
+        {
+          "speaker": "buyer",
+          "name": "Tomás Reinhardt",
+          "title": "MD, Portfolio Operations",
+          "text": "Make it $55K, give me a no-questions-asked exit at day 60 if it's not landing, and you have the deal."
+        },
+        {
+          "speaker": "agent",
+          "role": "closer",
+          "text": "$55K with the day-60 break clause, but the firm-level commitment if we hit the 30% cycle-back number stays. Deal."
+        }
+      ],
+      "outcome": {
+        "agreedPriceUsd": 55000,
+        "term": "90 days, day-60 break clause",
+        "paymentSchedule": "50% on signature, 50% at day 60 if no break invoked",
+        "dealRef": "NORTHGATE-2026-03"
+      }
+    }
+  ]
+}
