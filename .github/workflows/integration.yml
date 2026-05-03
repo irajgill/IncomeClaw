@@ -1,0 +1,78 @@
+name: integration (0G testnet)
+
+# Hits real 0G Galileo testnet — costs faucet 0G and Router balance.
+# Only runs when:
+#   - a maintainer adds the `run-integration` label to a PR, or
+#   - someone manually triggers via the Actions tab.
+# Never runs on plain push/PR — that would burn faucet quota every commit.
+
+on:
+  pull_request:
+    types: [labeled]
+  workflow_dispatch:
+
+concurrency:
+  group: integration-${{ github.ref }}
+  cancel-in-progress: false   # don't cancel — testnet txs may be in flight
+
+jobs:
+  smoke:
+    name: scripts/smoke-test.ts + scripts/smoke-tavily.ts
+    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'run-integration'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.0
+          run_install: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build (so workspace deps resolve)
+        run: pnpm build
+
+      - name: Framework smoke (Compute Router + Storage + Chain)
+        env:
+          RPC_URL: ${{ secrets.RPC_URL }}
+          INDEXER_URL: ${{ secrets.INDEXER_URL }}
+          CHAIN_ID: ${{ secrets.CHAIN_ID }}
+          EXPLORER_URL: ${{ secrets.EXPLORER_URL }}
+          STORAGE_EXPLORER_URL: ${{ secrets.STORAGE_EXPLORER_URL }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          COMPUTE_ROUTER_BASE_URL: ${{ secrets.COMPUTE_ROUTER_BASE_URL }}
+          COMPUTE_ROUTER_API_KEY: ${{ secrets.COMPUTE_ROUTER_API_KEY }}
+          AGENT_NFT_ADDRESS: ${{ secrets.AGENT_NFT_ADDRESS }}
+          MEMORY_REVOCATION_ADDRESS: ${{ secrets.MEMORY_REVOCATION_ADDRESS }}
+          PAYMENT_RECEIPT_ADDRESS: ${{ secrets.PAYMENT_RECEIPT_ADDRESS }}
+          ORACLE_URL: ${{ secrets.ORACLE_URL }}
+          ORACLE_AUTH_TOKEN: ${{ secrets.ORACLE_AUTH_TOKEN }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        run: pnpm smoke
+
+      - name: Tavily smoke
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          # The shared loadEnv() schema requires every var; pass them through.
+          RPC_URL: ${{ secrets.RPC_URL }}
+          INDEXER_URL: ${{ secrets.INDEXER_URL }}
+          CHAIN_ID: ${{ secrets.CHAIN_ID }}
+          EXPLORER_URL: ${{ secrets.EXPLORER_URL }}
+          STORAGE_EXPLORER_URL: ${{ secrets.STORAGE_EXPLORER_URL }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          COMPUTE_ROUTER_BASE_URL: ${{ secrets.COMPUTE_ROUTER_BASE_URL }}
+          COMPUTE_ROUTER_API_KEY: ${{ secrets.COMPUTE_ROUTER_API_KEY }}
+          AGENT_NFT_ADDRESS: ${{ secrets.AGENT_NFT_ADDRESS }}
+          MEMORY_REVOCATION_ADDRESS: ${{ secrets.MEMORY_REVOCATION_ADDRESS }}
+          PAYMENT_RECEIPT_ADDRESS: ${{ secrets.PAYMENT_RECEIPT_ADDRESS }}
+          ORACLE_URL: ${{ secrets.ORACLE_URL }}
+          ORACLE_AUTH_TOKEN: ${{ secrets.ORACLE_AUTH_TOKEN }}
+        run: pnpm smoke:tavily

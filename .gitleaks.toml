@@ -1,0 +1,44 @@
+# gitleaks config for IncomeClaw.
+#
+# Inherits gitleaks' default ruleset and adds repo-specific allowlists for
+# strings that look secret-shaped but are demonstrably public on-chain
+# identifiers — chiefly the AgentNFT, MemoryRevocation, and PaymentReceipt
+# contract addresses on 0G Galileo testnet, plus the dev oracle URL.
+
+title = "IncomeClaw gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Public-by-design 0G testnet identifiers and lockfile hashes"
+# Order matters in some gitleaks versions — paths first, then regexes.
+paths = [
+  '''pnpm-lock\.yaml''',
+  '''contracts/lib/.*''',
+  '''contracts/out/.*''',
+  '''contracts/cache/.*''',
+  '''contracts/broadcast/.*''',
+  '''deployments/.*\.json''',
+  '''\.env\.example''',
+]
+
+regexes = [
+  # AgentNFT (deployed by SovereignClaw Phase 10).
+  '''0xc3f997545da4AA8E70C82Aab82ECB48722740601''',
+  # MemoryRevocation (deployed by SovereignClaw Phase 10).
+  '''0x735084C861E64923576D04d678bA2f89f6fbb6AC''',
+  # Dev oracle hostname.
+  '''oracle-production-5db4\.up\.railway\.app''',
+  # 0G Galileo public endpoints.
+  '''evmrpc-testnet\.0g\.ai''',
+  '''indexer-storage-testnet-turbo\.0g\.ai''',
+  '''chainscan-galileo\.0g\.ai''',
+  '''storagescan-galileo\.0g\.ai''',
+  '''router-api-testnet\.integratenetwork\.work''',
+  # Placeholder secrets in .env.example — present and obviously fake.
+  '''0x0{64}''',
+  '''sk-replace-me''',
+  '''tvly-replace-me''',
+  '''replace-me''',
+]
