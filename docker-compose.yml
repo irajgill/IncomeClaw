@@ -1,0 +1,53 @@
+# IncomeClaw — local development stack.
+#
+#   docker compose up           # start redis + orchestrator (foreground)
+#   docker compose up -d        # detached
+#   docker compose down         # stop + remove containers
+#   docker compose logs -f orchestrator
+#
+# Phase A scope: the orchestrator is a stub that serves /healthz only.
+# Phase D/E grow this stack with BullMQ workers and the full route surface.
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: incomeclaw-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+
+  orchestrator:
+    build:
+      context: .
+      dockerfile: apps/orchestrator/Dockerfile
+    container_name: incomeclaw-orchestrator
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    ports:
+      - "8787:8787"
+    environment:
+      NODE_ENV: development
+      LOG_LEVEL: info
+      PORT: "8787"
+      REDIS_URL: redis://redis:6379
+    healthcheck:
+      test:
+        ["CMD", "node", "-e", "fetch('http://127.0.0.1:8787/healthz').then(r=>r.ok?process.exit(0):process.exit(1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  redis-data:
+    name: incomeclaw-redis-data

@@ -1,0 +1,17 @@
+node_modules
+dist
+build
+.next
+.turbo
+coverage
+*.log
+.env
+.env.*
+.git
+.github
+contracts
+deployments
+docs
+examples
+scripts
+e2e
