@@ -1,0 +1,38 @@
+{
+  "name": "@incomeclaw/agents",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./errors": {
+      "types": "./dist/errors.d.ts",
+      "import": "./dist/errors.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@sovereignclaw/core": "0.1.0",
+    "@sovereignclaw/inft": "0.1.0",
+    "@sovereignclaw/memory": "0.1.0",
+    "@sovereignclaw/mesh": "0.1.0",
+    "@sovereignclaw/reflection": "0.1.0",
+    "ethers": "6.13.4",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "22.7.5",
+    "typescript": "5.5.4",
+    "vitest": "2.1.2"
+  }
+}

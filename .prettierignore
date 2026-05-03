@@ -1,0 +1,14 @@
+node_modules/
+dist/
+build/
+out/
+.next/
+.turbo/
+coverage/
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+contracts/lib/
+deployments/
+pnpm-lock.yaml
+*.md
