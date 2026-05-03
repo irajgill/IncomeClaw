@@ -1,0 +1,32 @@
+{
+  "chain": "0g-galileo",
+  "chainId": 16602,
+  "rpcUrl": "https://evmrpc-testnet.0g.ai",
+  "explorerBase": "https://chainscan-galileo.0g.ai",
+  "contracts": {
+    "agentNFT": {
+      "address": "0xc3f997545da4AA8E70C82Aab82ECB48722740601",
+      "deployedBy": "sovereignclaw",
+      "phase": "sovereignclaw-v0.1.0",
+      "explorerUrl": "https://chainscan-galileo.0g.ai/address/0xc3f997545da4AA8E70C82Aab82ECB48722740601",
+      "verifiedUrl": null
+    },
+    "memoryRevocation": {
+      "address": "0x735084C861E64923576D04d678bA2f89f6fbb6AC",
+      "deployedBy": "sovereignclaw",
+      "phase": "sovereignclaw-v0.1.0",
+      "explorerUrl": "https://chainscan-galileo.0g.ai/address/0x735084C861E64923576D04d678bA2f89f6fbb6AC",
+      "verifiedUrl": null
+    },
+    "paymentReceipt": {
+      "address": null,
+      "deployedBy": "incomeclaw",
+      "phase": "incomeclaw-A4",
+      "explorerUrl": null,
+      "verifiedUrl": null,
+      "deployTxHash": null,
+      "block": null,
+      "deployedAt": null
+    }
+  }
+}
