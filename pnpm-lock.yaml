@@ -12,8 +12,8 @@ importers:
         specifier: 1.2.1
         version: 1.2.1(bufferutil@4.1.0)(ethers@6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)
       '@sovereignclaw/core':
-        specifier: 0.1.0
-        version: 0.1.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+        specifier: 0.2.0
+        version: 0.2.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@sovereignclaw/memory':
         specifier: 0.1.0
         version: 0.1.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
@@ -73,8 +73,8 @@ importers:
   agents:
     dependencies:
       '@sovereignclaw/core':
-        specifier: 0.1.0
-        version: 0.1.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+        specifier: 0.2.0
+        version: 0.2.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@sovereignclaw/inft':
         specifier: 0.1.0
         version: 0.1.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
@@ -82,11 +82,11 @@ importers:
         specifier: 0.1.0
         version: 0.1.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@sovereignclaw/mesh':
-        specifier: 0.1.0
-        version: 0.1.0(bufferutil@4.1.0)(ethers@6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)
+        specifier: 0.2.0
+        version: 0.2.0(bufferutil@4.1.0)(ethers@6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)
       '@sovereignclaw/reflection':
-        specifier: 0.1.0
-        version: 0.1.0(bufferutil@4.1.0)(ethers@6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)
+        specifier: 0.1.1
+        version: 0.1.1(bufferutil@4.1.0)(ethers@6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)
       ethers:
         specifier: 6.13.4
         version: 6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
@@ -865,8 +865,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@sovereignclaw/core@0.1.0':
-    resolution: {integrity: sha512-SHgwro2aNAUVRFxjlHyPk2BflQ+bZYJlKr+fwPoIjAFRP7GJLQ1jyzK29MNwAsUPlgUbOwijenie5KU7+q5Emw==}
+  '@sovereignclaw/core@0.2.0':
+    resolution: {integrity: sha512-h0JfTUzIgYnQJOmg38o0OwK5p4kckZvoYl7ctVmc3qLi9xjKtHVZzUsmhTF/Ozj/mxbKhO8Dmv7ffqKhXRlS2w==}
 
   '@sovereignclaw/inft@0.1.0':
     resolution: {integrity: sha512-YN6ObDneOr6ymJmoP8J6b49eB5H6V765VkJu9MUJApV2WoJF7AMJoD8BDUcNVK1zoXQ2Qfn+zzSgUVCbJBqvbw==}
@@ -874,13 +874,13 @@ packages:
   '@sovereignclaw/memory@0.1.0':
     resolution: {integrity: sha512-iDbVShSuyRXhD1m14KRopCeu+oQtW93OLIZmXR0DabMclmJ3VM2P4ucm75DdXFRiPaLeYnjq9xAOIutCLAplqQ==}
 
-  '@sovereignclaw/mesh@0.1.0':
-    resolution: {integrity: sha512-PO0o8yhWRiX5lBITvixJ9YNx3povY61RH58VBXFjs2kxWVu2FD8irBUkSUpHB8+iicYWgybQyWj0JJWgR/2hag==}
+  '@sovereignclaw/mesh@0.2.0':
+    resolution: {integrity: sha512-Ovbe4lWycwFRZBV5jUNOTgcqkk7jia4K70N8F8+IyfnLoks7S1wF7blm9rhwRhUy5URgNvIugXk1DfFZ5/fYOQ==}
     peerDependencies:
       ethers: ^6.13.4
 
-  '@sovereignclaw/reflection@0.1.0':
-    resolution: {integrity: sha512-evBjidX2OamNbgTnP/pH0Yp1KJnXKWD6z8i9eHhqPJy+v2SrFodF7EZTWLCyDxapvcycnjCgaZUKI9eMafdP2A==}
+  '@sovereignclaw/reflection@0.1.1':
+    resolution: {integrity: sha512-ahldRqYCH3e5bSVoXMnNpa71rIDv53K8Nx2EB+1K1BTeelq2+jtxydeTYPhnbPeFM0iAIH9ilI7MguaCV5ucBA==}
     peerDependencies:
       ethers: ^6.13.4
 
@@ -2718,7 +2718,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.60.2':
     optional: true
 
-  '@sovereignclaw/core@0.1.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+  '@sovereignclaw/core@0.2.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@sovereignclaw/memory': 0.1.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       zod: 3.23.8
@@ -2748,9 +2748,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@sovereignclaw/mesh@0.1.0(bufferutil@4.1.0)(ethers@6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)':
+  '@sovereignclaw/mesh@0.2.0(bufferutil@4.1.0)(ethers@6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)':
     dependencies:
-      '@sovereignclaw/core': 0.1.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@sovereignclaw/core': 0.2.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@sovereignclaw/memory': 0.1.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       ethers: 6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
@@ -2759,9 +2759,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@sovereignclaw/reflection@0.1.0(bufferutil@4.1.0)(ethers@6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)':
+  '@sovereignclaw/reflection@0.1.1(bufferutil@4.1.0)(ethers@6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)':
     dependencies:
-      '@sovereignclaw/core': 0.1.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@sovereignclaw/core': 0.2.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@sovereignclaw/memory': 0.1.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       ethers: 6.13.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
     transitivePeerDependencies:

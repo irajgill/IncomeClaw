@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@0gfoundation/0g-ts-sdk": "1.2.1",
-    "@sovereignclaw/core": "0.1.0",
+    "@sovereignclaw/core": "0.2.0",
     "@sovereignclaw/memory": "0.1.0",
     "dotenv": "16.4.5",
     "ethers": "6.13.4",
