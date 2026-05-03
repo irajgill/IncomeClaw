@@ -3,8 +3,8 @@
 > Five sovereign agents on 0G — built on [SovereignClaw](https://www.npmjs.com/org/sovereignclaw).
 > Track 2 reference implementation for the ETHGlobal 0G hackathon.
 
-[![CI](https://github.com/amsorrytola/IncomeClaw/actions/workflows/ci.yml/badge.svg)](https://github.com/amsorrytola/IncomeClaw/actions/workflows/ci.yml)
-[![gitleaks](https://github.com/amsorrytola/IncomeClaw/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/amsorrytola/IncomeClaw/actions/workflows/gitleaks.yml)
+[![CI](https://github.com/irajgill/IncomeClaw/actions/workflows/ci.yml/badge.svg)](https://github.com/irajgill/IncomeClaw/actions/workflows/ci.yml)
+[![gitleaks](https://github.com/irajgill/IncomeClaw/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/irajgill/IncomeClaw/actions/workflows/gitleaks.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 ![Phase](https://img.shields.io/badge/phase-A%20complete-green)
 ![0G](https://img.shields.io/badge/0G-Galileo%20testnet-orange)
@@ -45,7 +45,7 @@ The full registry lives at [`deployments/0g-testnet.json`](deployments/0g-testne
 ## Quickstart
 
 ```bash
-git clone https://github.com/amsorrytola/IncomeClaw.git
+git clone https://github.com/irajgill/IncomeClaw.git
 cd IncomeClaw
 
 cp .env.example .env                    # then edit the placeholders — see below
