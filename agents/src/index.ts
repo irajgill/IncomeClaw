@@ -19,3 +19,6 @@ export * from './opener.js';
 export * from './closer.js';
 export * from './operator.js';
 export * from './shared.js';
+
+// Phase C — mesh wiring
+export * from './mesh.js';

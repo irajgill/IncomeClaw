@@ -6,7 +6,7 @@
 [![CI](https://github.com/irajgill/IncomeClaw/actions/workflows/ci.yml/badge.svg)](https://github.com/irajgill/IncomeClaw/actions/workflows/ci.yml)
 [![gitleaks](https://github.com/irajgill/IncomeClaw/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/irajgill/IncomeClaw/actions/workflows/gitleaks.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-![Phase](https://img.shields.io/badge/phase-B%20complete-green)
+![Phase](https://img.shields.io/badge/phase-C%20wired-yellow)
 ![0G](https://img.shields.io/badge/0G-Galileo%20testnet-orange)
 
 **Status:** Phase B complete (5 agents + 4 tools + run-agent / run-tool CLIs).
@@ -137,12 +137,15 @@ pnpm lint:fix                           # eslint --fix
 ## What's next
 
 - **Phase B (DONE)** — five agent factories + four tools + `pnpm run-agent` /
-  `pnpm run-tool` CLIs. DoD verified end-to-end on Galileo
-  ([`docs/phase-b.md`](docs/phase-b.md)).
-- **Phase C (next)** — mesh wiring: `agents/mesh.ts` instantiates the Mesh,
-  composes `hierarchical` (Brain root) + `planExecuteCritique`, plus the
-  BullMQ `mesh-runner` worker and a replay test.
-- **Phase D–F** — backend API, frontend dashboard, PDF + payment polish.
+  `pnpm run-tool` CLIs ([`docs/phase-b.md`](docs/phase-b.md)).
+- **Phase C (wired)** — `agents/mesh.ts` (single-executor PEC + sequential
+  Opener→Closer→Operator), BullMQ `mesh-runner` worker, `POST /brief`,
+  replay invariant test. Full end-to-end DoD partial; carryover documented
+  in [`docs/phase-c.md`](docs/phase-c.md) (single-wallet OG storage write
+  burst-rate ceiling — needs upstream fix or per-agent signers).
+- **Phase D (next)** — backend API surface (SSE feed, hire/kill/rehire) +
+  upstream PR to address the storage write-burst issue.
+- **Phase E–F** — frontend dashboard, PDF + payment polish.
 
 See [`IncomeClaw-Roadmap.md`](IncomeClaw-Roadmap.md) for the whole plan.
 
