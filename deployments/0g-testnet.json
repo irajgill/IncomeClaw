@@ -19,14 +19,16 @@
       "verifiedUrl": null
     },
     "paymentReceipt": {
-      "address": null,
+      "address": "0x0005910E1ecf654e7661C7beeA31A3ddE3BD3d8F",
       "deployedBy": "incomeclaw",
       "phase": "incomeclaw-A4",
-      "explorerUrl": null,
+      "explorerUrl": "https://chainscan-galileo.0g.ai/address/0x0005910E1ecf654e7661C7beeA31A3ddE3BD3d8F",
       "verifiedUrl": null,
-      "deployTxHash": null,
-      "block": null,
-      "deployedAt": null
+      "deployTxHash": "0x34fb50dafae685354fd35562b5e4b4a7cc0d45aa8a42187dbf50757c30f8243b",
+      "deployTxUrl": "https://chainscan-galileo.0g.ai/tx/0x34fb50dafae685354fd35562b5e4b4a7cc0d45aa8a42187dbf50757c30f8243b",
+      "block": 31273711,
+      "deployedAt": 1777801530,
+      "gasUsed": 561052
     }
   }
 }
