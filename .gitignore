@@ -26,3 +26,6 @@ contracts/broadcast/
 .idea/
 
 deployments/local-*.json
+
+scripts/smoke-test.last.json
+scripts/smoke-tavily.last.json
