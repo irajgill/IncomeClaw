@@ -1,0 +1,24 @@
+// This file is INTENTIONALLY broken and is excluded from build/lint via
+// `examples/lint-violations/**` in eslint.config.js's `ignores` block, plus
+// the `.disabled` suffix that keeps tsc from picking it up. It exists as
+// living documentation: any of these import lines would cause `pnpm lint`
+// to fail with the no-restricted-imports / boundaries error if you renamed
+// this file to .ts and removed the eslint ignore entry.
+//
+// See IncomeClaw-Roadmap.md §13 working agreement #1 (no internal-reach)
+// and docs/no-internal-reach.md.
+
+// ❌ Forbidden — reaching into a built artifact.
+import { Agent } from '@sovereignclaw/core/dist/agent.js';
+
+// ❌ Forbidden — reaching into source.
+import { OG_Log } from '@sovereignclaw/memory/src/og-log.js';
+
+// ❌ Forbidden — reaching into an unexported internal module.
+import { reencryptInternal } from '@sovereignclaw/inft/internal/oracle-client.js';
+
+// ✅ The correct shape — the public entry only.
+import { Agent as AgentOk } from '@sovereignclaw/core';
+import { OG_Log as OG_LogOk, encrypted } from '@sovereignclaw/memory';
+
+export { Agent, OG_Log, reencryptInternal, AgentOk, OG_LogOk, encrypted };
