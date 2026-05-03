@@ -20,6 +20,7 @@
     "format:check": "prettier --check .",
     "smoke": "tsx scripts/smoke-test.ts",
     "smoke:tavily": "tsx scripts/smoke-tavily.ts",
+    "forge:bootstrap": "cd contracts && rm -rf lib && forge install --no-git foundry-rs/forge-std@v1.9.4 OpenZeppelin/openzeppelin-contracts@v5.1.0 && find lib -name .git -prune -exec rm -rf {} + && find lib -name .gitmodules -delete",
     "forge:build": "cd contracts && forge build",
     "forge:test": "cd contracts && forge test -vvv",
     "deploy:payment-receipt": "cd contracts && forge script script/Deploy.s.sol --rpc-url $RPC_URL --private-key $PRIVATE_KEY --broadcast"

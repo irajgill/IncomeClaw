@@ -7,7 +7,13 @@ Foundry project. One contract this phase: [`PaymentReceipt`](src/PaymentReceipt.
 - `src/` — Solidity 0.8.24 sources
 - `test/` — Foundry tests (`forge test -vvv`)
 - `script/` — deploy scripts (`forge script`)
-- `lib/` — vendored deps: `forge-std`, `openzeppelin-contracts@v5.1.0`
+- `lib/` — Foundry deps (gitignored); fetch with `pnpm forge:bootstrap` from repo root
+
+## First-time setup on a fresh clone
+
+```bash
+pnpm forge:bootstrap     # one-time: forge install forge-std + OZ@v5.1.0
+```
 
 ## Common commands
 
